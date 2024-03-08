@@ -1816,7 +1816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_Player_Parrot
+      name: GUI_Avatar_Parrot
       rect:
         serializedVersion: 2
         x: 405
@@ -1925,11 +1925,11 @@ TextureImporter:
       GUI_79: 2072200107
       GUI_8: 844112058
       GUI_9: -268228793
+      GUI_Avatar_Parrot: -854517227
       GUI_Board: 1632578824
       GUI_Cell: -2094167362
       GUI_Cell_Hover: -1104358441
       GUI_Player: -1782240560
-      GUI_Player_Parrot: -854517227
       GUI_Wall: -45970260
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
