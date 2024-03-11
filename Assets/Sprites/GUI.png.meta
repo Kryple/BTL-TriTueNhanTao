@@ -1836,6 +1836,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GUI_Avatar_Cat
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 219
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f25b146390aab46a9af27b7ba3fd81
+      internalID: 1834329440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_Wall1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 180
+        width: 94
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c351964e661eb458c808ccf50cd9c7
+      internalID: -1801262923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1925,12 +1967,14 @@ TextureImporter:
       GUI_79: 2072200107
       GUI_8: 844112058
       GUI_9: -268228793
+      GUI_Avatar_Cat: 1834329440
       GUI_Avatar_Parrot: -854517227
       GUI_Board: 1632578824
       GUI_Cell: -2094167362
       GUI_Cell_Hover: -1104358441
       GUI_Player: -1782240560
       GUI_Wall: -45970260
+      GUI_Wall1: -1801262923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

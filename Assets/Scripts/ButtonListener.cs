@@ -9,23 +9,26 @@ public class ButtonListener : MonoBehaviour, IPointerClickHandler
 {
     public GameObject PauseCanvas;
     private bool isPaused;
-
+    private int _mainMenuSceneID = 0;
+    private int _gameplaySceneID = 1;
+    
+    
     public void StartQuoridor()
     {
-        SceneManager.LoadScene("QuoridorScene");
+        SceneManager.LoadScene(_gameplaySceneID);
         
     }
 
     public void StartMenu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(_mainMenuSceneID);
         //ShareCanvas.FirstCanvas.SetActive(false);
 
     }
 
     public void AddGame()
     {
-
+        
     }
 
     public void Restart()
@@ -64,7 +67,7 @@ public class ButtonListener : MonoBehaviour, IPointerClickHandler
     public void Description()
     {
         // AudioManager.Instance.ButtonSelectEffect();
-        Application.OpenURL("https://bgcommunity-1fe2b.web.app/?page=thread&gallery=quoridor&status=view&thread=DygyaPDWphfkgPZ7j8eo");
+        Application.OpenURL("https://www.wikiboardgames.com/quoridor-rules/");
     }
 
     public void StartCommunity()

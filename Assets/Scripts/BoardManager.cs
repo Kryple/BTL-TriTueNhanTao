@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -20,9 +21,9 @@ public class BoardManager : MonoBehaviour
     private int count = 1;
 
     public float time = 0f;
-    public Text result_Elapased_Time;
-    public Text result_Turn_Count;
-    public Text In_Game_Turn_Count;
+    public TextMeshProUGUI result_Elapased_Time;
+    public TextMeshProUGUI result_Turn_Count;
+    public TextMeshProUGUI In_Game_Turn_Count;
 
     public int leftWallsW = 9;
     public int leftWallsB = 9;
@@ -67,7 +68,7 @@ public class BoardManager : MonoBehaviour
         GameObject temp;
         Instance = this;
 
-        temp = Resources.Load("Prefabs/wall") as GameObject;
+        temp = Resources.Load("Prefabs/wall1") as GameObject;
         wallPrefab.Add(temp);
 
         temp = Resources.Load("Prefabs/WallCube") as GameObject;
@@ -87,7 +88,11 @@ public class BoardManager : MonoBehaviour
             time += Time.deltaTime;
             UpdateSelection();
             if (!isSelected)
+            {
                 SetWall();
+                
+            }
+                
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -449,7 +454,7 @@ public class BoardManager : MonoBehaviour
     private void White_Turn_End()
     {
         count++;
-        In_Game_Turn_Count.text = count.ToString();
+        In_Game_Turn_Count.text = $"Turns: count.ToString()";
         WhitesTurn.SetActive(false);
         BlackesTurn.SetActive(true);
     }
@@ -457,7 +462,7 @@ public class BoardManager : MonoBehaviour
     private void Black_Turn_End()
     {
         count++;
-        In_Game_Turn_Count.text = count.ToString();
+        In_Game_Turn_Count.text = $"Turns: count.ToString()";
         WhitesTurn.SetActive(true);
         BlackesTurn.SetActive(false);
     }
@@ -501,8 +506,8 @@ public class BoardManager : MonoBehaviour
 
     private void EndGame()
     {
-        result_Elapased_Time.text = Mathf.Round(time)+" (s)";
-        result_Turn_Count.text = count + " turns";
+        result_Elapased_Time.text = $"Time: {Mathf.Round(time)} (s)";
+        result_Turn_Count.text = $"Turns: {count} turns";
 
         // AudioManager.Instance.EndGameEffect();
         if (isWhiteTurn)
@@ -516,8 +521,7 @@ public class BoardManager : MonoBehaviour
             Winner_Black.SetActive(true);
         }
             
-
-        // 게임이 종료될 때 오브젝트를 삭제 후 원위치 시킬지 결정 필요
+        
         foreach (GameObject go in activePawn)
             Destroy(go);
 
