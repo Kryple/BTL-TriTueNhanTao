@@ -9,39 +9,48 @@ public class ButtonListener : MonoBehaviour, IPointerClickHandler
 {
     public GameObject PauseCanvas;
     private bool isPaused;
-    private int _mainMenuSceneID = 0;
-    private int _gameplaySceneID = 1;
+
+    enum SceneID
+    {
+        MAIN_MENU = 0,
+        CHOOSE_MODE,
+        CHOOSE_CHARACTER,
+        GAME_PLAY
+    }
     
     
-    public void StartQuoridor()
+
+    public void OpenMainMenu()
     {
-        SceneManager.LoadScene(_gameplaySceneID);
-        
+        SceneManager.LoadScene((int)SceneID.MAIN_MENU); 
     }
 
-    public void StartMenu()
+    public void OpenChooseModeScene()
     {
-        SceneManager.LoadScene(_mainMenuSceneID);
-        //ShareCanvas.FirstCanvas.SetActive(false);
-
+        SceneManager.LoadScene((int)SceneID.CHOOSE_MODE);
     }
-
-    public void AddGame()
+    
+    public void OpenChoosingPlayerScene()
     {
-        
+        SceneManager.LoadScene((int)SceneID.CHOOSE_CHARACTER);
+    }
+    
+    public void OpenGameplay()
+    {
+        SceneManager.LoadScene((int)SceneID.GAME_PLAY);
     }
 
     public void Restart()
     {
         // AudioManager.Instance.ButtonSelectEffect();
-        StartQuoridor();
+        OpenGameplay();
         Time.timeScale = 1;
     }
      
     public void Exit()
     {
         // AudioManager.Instance.ButtonSelectEffect();
-        StartMenu();
+        OpenMainMenu();
         Time.timeScale = 1;
     }
 
@@ -101,13 +110,12 @@ public class ButtonListener : MonoBehaviour, IPointerClickHandler
                     StartCommunity();
                     break;
                 case "QuoridorButton":
-                    StartQuoridor();
-                    break;
-                case "GameAddButton":
-                    AddGame();
+                    OpenGameplay();
                     break;
             }
         }
                 throw new System.NotImplementedException();
     }
+
+    
 }

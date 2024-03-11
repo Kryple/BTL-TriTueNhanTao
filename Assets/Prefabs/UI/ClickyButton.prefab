@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 4146576214890506380}
   - component: {fileID: 99411129603779566}
   - component: {fileID: 3451711138979289094}
+  - component: {fileID: 7754407643071909786}
   m_Layer: 5
   m_Name: ClickyButton
   m_TagString: Untagged
@@ -301,6 +302,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7754407643071909786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3620569423347806942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc4063fd90b834abee7e92398f4fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseCanvas: {fileID: 0}
 --- !u!1 &4186260391552784019
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +383,8 @@ MonoBehaviour:
   m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 161f8113cfafad5448c719e7bcf2030f, type: 2}
-  m_sharedMaterial: {fileID: 254367480523916294, guid: 161f8113cfafad5448c719e7bcf2030f, type: 2}
+  m_sharedMaterial: {fileID: 254367480523916294, guid: 161f8113cfafad5448c719e7bcf2030f,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

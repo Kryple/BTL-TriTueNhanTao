@@ -25,7 +25,7 @@ public class MenuUIController : MonoBehaviour
         _aboutScreen.SetActive(false);
         
         
-        _startButton.onClick.AddListener(LoadGameScene);
+        // _startButton.onClick.AddListener(LoadGameScene);
         _settingsButton.onClick.AddListener(SettingsButtonOnClick);
         _aboutButton.onClick.AddListener(AboutButtonOnClick);
         _exitButton.onClick.AddListener(ExitButtonOnClick);
