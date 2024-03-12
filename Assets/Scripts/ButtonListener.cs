@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ButtonListener : MonoBehaviour, IPointerClickHandler
+public class ButtonListener : MonoBehaviour
 {
     public GameObject PauseCanvas;
     private bool isPaused;
@@ -84,37 +84,16 @@ public class ButtonListener : MonoBehaviour, IPointerClickHandler
         Application.OpenURL("https://bgcommunity-1fe2b.web.app/");
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnChoosePvPMode()
     {
+        GameObject.Find("GameManager").GetComponent<GameManager>()._gameMode = GameManager.GameMode.PVP;
+        OpenChoosingPlayerScene();
+    }
 
-        // if (eventData.clickCount == 1)
-        // {
-        //     string name = EventSystem.current.currentSelectedGameObject.name;
-        //
-        //     switch (name)
-        //     {
-        //         case "QuoridorButton":
-        //             ShareCanvas.QuoridorPreview.SetActive(true);
-        //             break;
-        //     }
-        //
-        // }
-
-        if (eventData.clickCount == 2)
-        {
-            string name=EventSystem.current.currentSelectedGameObject.name;
-            
-            switch(name)
-            {
-                case "CommunityButton":
-                    StartCommunity();
-                    break;
-                case "QuoridorButton":
-                    OpenGameplay();
-                    break;
-            }
-        }
-                throw new System.NotImplementedException();
+    public void OnChoosePvEMode()
+    {
+        GameObject.Find("GameManager").GetComponent<GameManager>()._gameMode = GameManager.GameMode.PVE;
+        OpenChoosingPlayerScene();
     }
 
     

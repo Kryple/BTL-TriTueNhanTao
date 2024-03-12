@@ -256,22 +256,7 @@ public class BoardManager : MonoBehaviour
         activePawn.Add(go);
     }
 
-    public void ChangeCamView()
-    {
-
-        //GameObject.Find("InGameCanvas").GetComponent<FadeScript>().Fade();
-
-        // if (isWhiteTurn)
-        // {
-        //     camA.gameObject.SetActive(true);
-        //     camB.gameObject.SetActive(false);
-        // }
-        // else
-        // {
-        //     camA.gameObject.SetActive(false);
-        //     camB.gameObject.SetActive(true);
-        // }
-    }
+    
 
     private void SpawnWall(Vector3 pos, bool isWhite)
     {
